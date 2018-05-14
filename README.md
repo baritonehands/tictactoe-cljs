@@ -1,4 +1,4 @@
-# shadow-cljs, proto-repl, reagent template
+# Tic Tac Toe in Clojurescript + React
 
 The `shadow-cljs` is a build tool for ClojureScript.
 

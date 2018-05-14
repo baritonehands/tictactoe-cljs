@@ -1,14 +1,13 @@
 {
-  "name": "shadow-reagent",
+  "name": "tictactoe-cljs",
   "version": "0.0.1",
-  "description": "Template for shadow-cljs and reagent projects",
+  "description": "Tac Tac Toe implemented in CLJS + React (reagent)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jacekschae/shadow-reagent"
+    "url": "https://github.com/baritonehands/tictactoe-cljs"
   },
   "author": {
-    "name": "Jacek Schae",
-    "email": "jacek.schae@gmail.com"
+    "name": "Brian Gregg"
   },
   "license": "MIT",
   "scripts": {

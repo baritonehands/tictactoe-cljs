@@ -1,6 +1,6 @@
-(ns app.core
+(ns tictactoe.core
   (:require [reagent.core :as reagent :refer [atom]]
-            [app.views :as views]))
+            [tictactoe.views :as views]))
 
 (defn ^:export main []
   (reagent/render-component [views/app]
