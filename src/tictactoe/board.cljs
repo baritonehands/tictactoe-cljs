@@ -13,17 +13,11 @@
 (defn next-player [player]
   (if (= :x player) :y :x))
 
-(defn row [board n]
-  (get-in board [:grid n]))
-
-(defn col [board n]
-  (mapv #(get % n) (:grid board)))
-
 (defn combos [board]
-  (concat (map #(row board %) (range 0 3))
-          (map #(col board %) (range 0 3))
-          [(mapv #(apply at board %) [[0 0] [1 1] [2 2]])
-           (mapv #(apply at board %) [[2 0] [1 1] [0 2]])]))                             
+  (let [[[a b c] [d e f] [g h i]] (:grid board)]
+    [[a b c] [d e f] [g h i] ; Rows
+     [a d g] [b e h] [c f i] ; Cols
+     [a e i] [c e g]])) ; Diags
 
 (defn combo-winner [[x y z]]
   (if (= x y z)
