@@ -22,8 +22,8 @@
 (defn combos [board]
   (concat (map #(row board %) (range 0 3))
           (map #(col board %) (range 0 3))
-          (mapcat #(apply at board %) [[[0 0] [1 1] [2 2]]
-                                       [[2 0] [1 1] [0 2]]])))
+          [(mapv #(apply at board %) [[0 0] [1 1] [2 2]])]
+          [(mapv #(apply at board %) [[2 0] [1 1] [0 2]])]))                             
 
 (defn combo-winner [[x y z]]
   (if (= x y z)
