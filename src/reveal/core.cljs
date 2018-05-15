@@ -11,8 +11,10 @@
 (def options #js {:controls    true
                   :progress    true
                   :transition  "fade"                    ; e.g. none/fade/slide/convex/concave/zoom
-                  :slideNumber false})
-
+                  :slideNumber false
+                  :dependencies #js [#js {:src "plugin/highlight/highlight.js"
+                                          :async true
+                                          :callback #(.initHighlightingOnLoad js/hljs)}]})
 
 ;;;; You do not need to change anything below this comment
 
