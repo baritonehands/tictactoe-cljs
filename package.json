@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "shadow-cljs": "^2.3.21"
+  },
+  "dependencies": {
+    "reveal.js": "git+ssh://git@stash.grubhub.com:7999/spike/reveal-grubhub.git"
+  }
+}

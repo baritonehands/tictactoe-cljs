@@ -1,0 +1,49 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/grubhub-sans/grubhub-sans.css);
+@import url(../../lib/font/graphik/graphik.css);
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #000;
+$headingColor: #F63440;
+
+$mainFontSize: 42px;
+$mainFont: 'Graphik', Helvetica, sans-serif;
+$headingFont: 'Grubhub Sans', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$linkColor: #F63440;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+.reveal .slide-background {
+	background-image: url(../../lib/images/grubhub/logo-full.svg);
+	background-position: 5% 95%;
+	background-size: 15%;
+	transition: unset;
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------

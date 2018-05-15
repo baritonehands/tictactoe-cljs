@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Grubhub Sans';
+    src: url('grubhub-sans-light.eot');
+    src: url('grubhub-sans-light.eot?#iefix') format('embedded-opentype'),
+         url('grubhub-sans-light.woff') format('woff'),
+         url('grubhub-sans-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Grubhub Sans';
+    src: url('grubhub-sans-bold.eot');
+    src: url('grubhub-sans-bold.eot?#iefix') format('embedded-opentype'),
+         url('grubhub-sans-bold.woff') format('woff'),
+         url('grubhub-sans-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

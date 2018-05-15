@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Graphik';
+    src: url('graphik-regular.eot');
+    src: url('graphik-regular.eot?#iefix') format('embedded-opentype'),
+         url('graphik-regular.woff') format('woff'),
+         url('graphik-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('graphik-bold.eot');
+    src: url('graphik-bold.eot?#iefix') format('embedded-opentype'),
+         url('graphik-bold.woff') format('woff'),
+         url('graphik-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
