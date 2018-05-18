@@ -1,6 +1,7 @@
 (ns reveal.klipse
   (:require-macros [hiccups.core :as hiccups :refer [html]])
-  (:require [clojure.string :as s]))
+  (:require [clojure.string :as s]
+            [reveal.snippets :as snippets]))
 
 (def lang->selector
   {"clojure" "selector",
@@ -32,11 +33,14 @@
             :srcdoc (html (iframe-src lang src))}])
 
 (defn klipsify [elem]
-  (let [lang (-> elem .-dataset .-language)
-        height (int (or (-> elem .-dataset .-height) "400"))]
-    (aset elem "innerHTML" (html (create-iframe lang (.-innerHTML elem) height)))))
+  (let [data (js->clj (.-dataset elem))
+        height (int (or (.-height data) "400"))
+        lang (.-language data)
+        src (.-src data)]
+    (if src
+      (snippets/fetch src #(aset elem "innerHTML" (html (create-iframe lang % height))))
+      (aset elem "innerHTML" (html (create-iframe lang (.-innerHTML elem) height))))))
 
 (defn klipsify-all []
   (doseq [x (array-seq (.querySelectorAll js/document "klipse-snippet"))]
-    (println x)
     (klipsify x)))

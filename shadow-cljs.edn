@@ -1,5 +1,6 @@
 {:source-paths ["src"]
  :dependencies [[org.clojure/clojurescript "1.10.238"]
+                [cljs-ajax "0.7.3"]
                 [thheller/shadow-cljs "2.3.21"]
                 [me.raynes/fs "1.4.6"]
                 [hiccups "0.3.0"]
