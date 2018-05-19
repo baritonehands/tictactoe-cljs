@@ -38,7 +38,7 @@
         lang (.-language data)
         src (.-src data)]
     (if src
-      (snippets/fetch src #(aset elem "innerHTML" (html (create-iframe lang % height))))
+      (aset elem "innerHTML" (html (create-iframe lang (get snippets/preloaded src) height)))
       (aset elem "innerHTML" (html (create-iframe lang (.-innerHTML elem) height))))))
 
 (defn klipsify-all []

@@ -4,7 +4,8 @@
             [goog.dom :as gdom]
             [hiccups.runtime :as hiccupsrt]
             [reveal.slides :as slides]
-            [reveal.klipse :refer [klipsify-all]]))
+            [reveal.klipse :refer [klipsify-all]]
+            [reveal.snippets :refer [render-all]]))
 
 
 ;; When changing comments, you manually need to refresh your browser
@@ -30,7 +31,8 @@
   (set! (.. (.getElementById js/document "slides") -innerHTML) (convert))
   (.initialize js/Reveal options)
   (.setState js/Reveal (.getState js/Reveal))
-  (klipsify-all))
+  (klipsify-all)
+  (render-all))
 
 (defn ^:dev/after-load on-js-reload []
   (main))

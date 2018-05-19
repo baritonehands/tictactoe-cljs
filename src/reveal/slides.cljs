@@ -16,13 +16,13 @@
     [:li "A dialect of LISP"]
     [:li "Homoiconic (code is data)"]]])
 
-; (def slide-7
-;   [:section
-;    [:h2 "Live Code Editing"]
-;    [:p "You can define snippets for live editing"]
-;    [:klipse-snippet {:data-language "clojure"
-;                      :data-height   300
-;                      :data-src      "sum"}]])
+(def slide-7
+  [:section
+   [:h2 "Live Code Editing"]
+   [:p "You can define snippets for live editing"]
+   [:klipse-snippet {:data-language "clojure"
+                     :data-height   300
+                     :data-src      "sum"}]])
 
 (def slide-3
   [:section
@@ -45,15 +45,12 @@
     [:li "(R)ead (E)val (P)rint (L)oop for a tight feedback loop"]
     [:li "Powerful features: macros, custom literals, destructuring, OO + more polymorphism constructs"]]])
 
-(defn slide-5 []
-  (snippets/render "literals")
+(def slide-5
   [:section
    [:h2 "ClojureScript Literals"]
    [:pre#literals]])
 
-(defn slide-6 []
-  (snippets/render "forms1")
-  (snippets/render "forms2")
+(def slide-6
   [:section
    [:h2 "ClojureScript Forms"]
    [:pre#forms1 {:style "width: 50%; float:left;"}]
@@ -66,6 +63,6 @@
    slide-2
    slide-3
    slide-4
-   (slide-5)
-   (slide-6)])
-   ; slide-7])
+   slide-5
+   slide-6
+   slide-7])
