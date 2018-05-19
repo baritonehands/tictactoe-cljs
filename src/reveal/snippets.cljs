@@ -6,10 +6,10 @@
 (def preloaded (preload "snippets"))
 
 (defn render [id]
-  (let [elem (.getElementById js/document id)
-        lines (for [line (s/split (get preloaded id) #"\n")]
-                [:code.hljs.clojure line "\n"])]
-    (set! (.-innerHTML elem) (html lines))))
+  (if-let [elem (.getElementById js/document id)]
+    (let [lines (for [line (s/split (get preloaded id) #"\n")]
+                  [:code.hljs.clojure line "\n"])]
+      (set! (.-innerHTML elem) (html lines)))))
 
 (defn render-all []
   (doseq [id (keys preloaded)]

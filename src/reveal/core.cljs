@@ -5,8 +5,7 @@
             [hiccups.runtime :as hiccupsrt]
             [reveal.slides :as slides]
             [reveal.klipse :refer [klipsify-all]]
-            [reveal.snippets :refer [render-all]]))
-
+            [reveal.snippets :refer [render-all]] :reload))
 
 ;; When changing comments, you manually need to refresh your browser
 (def options #js {:controls    true

@@ -1,7 +1,7 @@
 (ns reveal.klipse
   (:require-macros [hiccups.core :as hiccups :refer [html]])
   (:require [clojure.string :as s]
-            [reveal.snippets :as snippets]))
+            [reveal.snippets :as snippets] :reload))
 
 (def lang->selector
   {"clojure" "selector",

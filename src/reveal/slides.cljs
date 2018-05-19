@@ -1,6 +1,5 @@
 (ns reveal.slides
-  (:require [clojure.string :as s]
-            [reveal.snippets :as snippets]))
+  (:require [clojure.string :as s]))
 
 (def slide-1
   [:section
@@ -15,14 +14,6 @@
     [:li "A dynamically typed functional language that targets the JVM"]
     [:li "A dialect of LISP"]
     [:li "Homoiconic (code is data)"]]])
-
-(def slide-7
-  [:section
-   [:h2 "Live Code Editing"]
-   [:p "You can define snippets for live editing"]
-   [:klipse-snippet {:data-language "clojure"
-                     :data-height   300
-                     :data-src      "sum"}]])
 
 (def slide-3
   [:section
@@ -47,22 +38,51 @@
 
 (def slide-5
   [:section
-   [:h2 "ClojureScript Literals"]
-   [:pre#literals]])
+   [:section
+    [:h2 "Literals"]
+    [:pre#literals1]]
+   [:section
+    [:h2 "Literals Cont."]
+    [:pre#literals2]]])
 
 (def slide-6
   [:section
-   [:h2 "ClojureScript Forms"]
-   [:pre#forms1 {:style "width: 50%; float:left;"}]
-   [:pre#forms2 {:style "width: 50%; float:left;"}]])
+   [:section
+    [:h2 "Forms"]
+    [:pre#forms1 {:style "width: 50%; float:left;"}]
+    [:pre#forms2 {:style "width: 50%; float:left;"}]]
+   [:section
+    [:h2 "Forms Cont."]
+    [:klipse-snippet {:data-language "clojure"
+                      :data-height   300
+                      :data-src      "forms3"}]]])
 
-(defn all
-  "Add here all slides you want to see in your presentation."
-  []
+(def slide-7
+  [:section
+   [:h2 "JavaScript Interop"]
+   [:klipse-snippet {:data-language "clojure"
+                     :data-height   500
+                     :data-src      "interop"}]])
+
+(def slide-8
+  [:section
+   [:h2 "And a whole lot more..."]
+   [:ul
+    [:li "Destructuring maps and vectors"]
+    [:li "Protocols for OO style inheritance"]
+    [:li "Multi-methods for multiple dispatch polymorphism"]]])
+
+(def slide-9
+  [:section
+   [:h1 "DEMO"]])
+
+(defn all []
   [slide-1
    slide-2
    slide-3
    slide-4
    slide-5
    slide-6
-   slide-7])
+   slide-7
+   slide-8
+   slide-9])

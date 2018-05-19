@@ -9,6 +9,7 @@
  :nrepl {:port 7888
          :middleware [cemerick.piggieback/wrap-cljs-repl]}
  :http-root "."
+ :cache-blockers #{reveal.snippets}
  :builds {:reveal {:target :browser
                    :output-dir "js"
                    :asset-path "js"
