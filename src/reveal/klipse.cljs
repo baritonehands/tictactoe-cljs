@@ -21,8 +21,12 @@
      [:pre
       [:code.klipse src]]
      [:link {:rel "stylesheet" :type "text/css" :href "https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"}]
+     [:link {:rel "stylesheet" :type "text/css" :href "https://codemirror.net/theme/zenburn.css"}]
+     [:style ".CodeMirror { font-size: 24px; }"]
      [:script (s/join "\n" ["window.klipse_settings = {"
-                            (str selector ": '.klipse'")
+                            (str selector ": '.klipse',")
+                            "codemirror_options_in: { theme: 'zenburn' },"
+                            "codemirror_options_out: { theme: 'zenburn' }"
                             "}"])]
      [:script {:src (js-src lang)}]]))
 
