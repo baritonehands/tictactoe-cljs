@@ -23,6 +23,15 @@ yarn install
 yarn dev
 ```
 
+## Generate CSS
+
+This is done automatically by ```yarn dev``` and ```yarn release```, but it can be
+run separately.
+
+```shell
+yarn css
+```
+
 ## Clean
 
 ``` shell

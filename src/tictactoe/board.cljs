@@ -2,7 +2,7 @@
 
 (defn create []
   {:player :x
-   :grid (mapv #(vec (repeat 3 :empty)) (range 0 3))})
+   :grid (vec (repeat 3 (vec (repeat 3 :empty))))})
 
 (defn at [board x y]
   (get-in board [:grid y x]))
