@@ -7,11 +7,11 @@
 (defn at [board x y]
   (get-in board [:grid y x]))
 
-(defn empty? [board x y]
+(defn empty-at? [board x y]
   (= :empty (at board x y)))
 
 (defn next-player [player]
-  (if (= :x player) :y :x))
+  (if (= :x player) :o :x))
 
 (defn combos [board]
   (let [[[a b c] [d e f] [g h i]] (:grid board)]
@@ -31,7 +31,7 @@
        (first)))
 
 (defn move [board x y]
-  (if (and (empty? board x y)
+  (if (and (empty-at? board x y)
            (not (winner board)))
     (-> (update board :player next-player)
         (assoc-in [:grid y x] (:player board)))
