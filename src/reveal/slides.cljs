@@ -76,6 +76,14 @@
   [:section
    [:h1 "DEMO"]])
 
+(def slide-10
+  [:section
+   [:h2 "ClojureScript Resources"]
+   [:ul {:style "font-size: 36px;"}
+    [:li [:a {:href "https://github.com/baritonehands/tictactoe-cljs"} "https://github.com/baritonehands/tictactoe-cljs"]]
+    [:li [:a {:href "https://clojurescript.org/"} "https://clojurescript.org/"]]
+    [:li "Slack: #clojurescript on " [:a {:href "https://clojurians.slack.com"} "clojurians"]]]])
+
 (defn all []
   [slide-1
    slide-2
@@ -85,4 +93,5 @@
    slide-6
    slide-7
    slide-8
-   slide-9])
+   slide-9
+   slide-10])
