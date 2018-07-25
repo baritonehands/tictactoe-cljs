@@ -84,14 +84,24 @@
     [:li [:a {:href "https://clojurescript.org/"} "https://clojurescript.org/"]]
     [:li "Slack: #clojurescript on " [:a {:href "https://clojurians.slack.com"} "clojurians"]]]])
 
+(defn baby-slide [& [title]]
+  [:section
+   (if title
+     [:h2 title] "")
+   [:img {:src "images/baby_cljs.png"
+          :style "transform: scale(0.5); transform-origin: top;"}]])
+
 (defn all []
   [slide-1
    slide-2
    slide-3
    slide-4
+   (baby-slide)
    slide-5
    slide-6
    slide-7
    slide-8
+   (baby-slide)
    slide-9
-   slide-10])
+   slide-10
+   (baby-slide "Thank You")])
