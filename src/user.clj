@@ -1,4 +1,8 @@
-(ns user)
+(ns user
+  "This namespace is loaded automatically from the compiler REPL"
+  (:require [shadow.cljs.devtools.api :as shadow]))
 
-; Recommended by shadow-cljs for use with Proto-REPL
-(defn reset [])
+(defn cljs-repl
+  "Connect to browser's CLJS REPL via Proto-REPL"
+  []
+  (shadow/nrepl-select :app))
